@@ -7,16 +7,20 @@
   <title>3d music gallery</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
 </head>
 
 <body>
-  <a-assets>
-    <audio id="energy" src="burst of energy.mp3"></audio>
-    <audio id="numb" src="i was numb.mp3"></audio>
-    <audio id="piano" src="just piano.mp3"></audio>
-  </a-assets>
   <a-scene>
-    <a-box color="blue"></a-box>
+    <a-entity environment></a-entity>
+    <a-entity environment="preset: <forest>"></a-entity>
+    <a-assets>
+      <audio id="energy" src="burst of energy.mp3"></audio>
+      <audio id="numb" src="i was numb.mp3"></audio>
+      <audio id="piano" src="just piano.mp3"></audio>
+    </a-assets>
+    <a-box color = "blue"></a-box>
+   <a-sky color="#ECECEC"></a-sky>
   </a-scene>
   <script src="script.js"></script>
 </body>
