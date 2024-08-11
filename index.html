@@ -20,19 +20,32 @@
     <a-camera>
       <a-cursor></a-cursor>
     </a-camera>
-
-    <a-light type="directional" intensity="1" position="-1 2 1" castShadow="true"></a-light>
+    <a-light type="ambient" color="#FFF">
+    <a-light type="directional" intensity="1" position="-1 10 -5" castShadow="true"></a-light>
     <a-sky color = "skyblue"></a-sky>
     <a-plane position= "0 0 0" width = "100" height = "100" rotation = "-90 0 0" color = "darkolivegreen" shadow="receive: true"></a-plane>
     
-    <a-entity id = "record1" geometry = "primitive: box; depth: 1; height: 2; width: 1" material="color:saddlebrown" position= "-1 0 -3" shadow="cast:true">
-      <a-cylinder geometry= "radius: 0.5; height: 0.1" material = "color: darkslategray" position = "0 1 0" sound="src: url(energy.mp3); on: click; rolloffFactor: 30" shadow="cast: true"></a-cylinder>
-      <a-box geometry="depth: 0.02; height: 0.02; width: 0.4" material="color: gray" position = "0.3 1.2 0" shadow="cast: true"></a-box>
-      <a-box geometry="depth: 0.02; height: 0.2; width: 0.02" material="color: gray" position = "0.5 1.1 0" shadow="cast: true"></a-box>
-    </a-entity>"
+    <a-entity class = "record-player" geometry = "primitive: box; depth: 1; height: 2; width: 1" material="color:antiquewhite" position= "-1 0 -3" shadow="cast:true">
+      <a-cylinder geometry= "radius: 0.5; height: 0.1" material = "color: black" position = "0 1 0" sound="src: url(energy.mp3); on: click; rolloffFactor: 10" shadow="cast: true"></a-cylinder>
+      <a-box geometry="depth: 0.02; height: 0.02; width: 0.4" material="color: saddlebrown" position = "0.3 1.2 0" shadow="cast: true"></a-box>
+      <a-box geometry="depth: 0.02; height: 0.2; width: 0.02" material="color: saddlebrown" position = "0.5 1.1 0" shadow="cast: true"></a-box>
+      <a-text value="record player: burst of energy" align="center" position = "0 1.5 0" color = "white" shadow="cast: true"></a-text>
+        <a-text value="click on a record to play music, click again to turn it off. enjoy :)" align="center" position = "0 3 -1" color = "white" shadow="cast: true"> </a-text>
+        </a-entity>
       
-      
-    </a-entity>
+      <a-entity class = "record-player" geometry = "primitive: box; depth: 1; height: 2; width: 1" material="color:lavender" position= "-5 0 -1" shadow="cast:true">
+        <a-cylinder geometry= "radius: 0.5; height: 0.1" material = "color: black" position = "0 1 0" sound="src: url(numb.mp3) on: click; rolloffFactor: 10" shadow="cast: true"></a-cylinder>
+        <a-box geometry="depth: 0.02; height: 0.02; width: 0.4" material="color: saddlebrown" position = "0.3 1.2 0" shadow="cast: true"></a-box>
+        <a-box geometry="depth: 0.02; height: 0.2; width: 0.02" material="color: saddlebrown" position = "0.5 1.1 0" shadow="cast: true"></a-box>
+        <a-text value="record player: i felt numb" align="center" position = "0 1.5 0" color = "white" shadow="cast: true"></a-text>
+          </a-entity>
+
+      <a-entity class = "record-player" geometry = "primitive: box; depth: 1; height: 2; width: 1" material="color:lightgreen" position= "4 0 -1" shadow="cast:true">
+        <a-cylinder geometry= "radius: 0.5; height: 0.1" material = "color: black" position = "0 1 0" sound="src: url(piano.mp3) on: click; rolloffFactor: 10" shadow="cast: true"></a-cylinder>
+        <a-box geometry="depth: 0.02; height: 0.02; width: 0.4" material="color: saddlebrown" position = "0.3 1.2 0" shadow="cast: true"></a-box>
+        <a-box geometry="depth: 0.02; height: 0.2; width: 0.02" material="color: saddlebrown" position = "0.5 1.1 0" shadow="cast: true"></a-box>
+        <a-text value="record player: some piano :)" align="center" position = "0 1.5 0" color = "white" shadow="cast: true"></a-text>
+          </a-entity>
 
 
     </a-scene>
